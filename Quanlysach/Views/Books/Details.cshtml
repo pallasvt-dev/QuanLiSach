@@ -1,0 +1,45 @@
+@model Quanlysach.Models.Book
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <img src="~/ImageBooks/@Model.Image"
+             width="300" />
+
+    </div>
+
+    <div class="col-md-8">
+
+        <h2>@Model.Title</h2>
+
+        <p>
+            <b>Tác giả:</b>
+            @Model.Author
+        </p>
+
+        <p>
+            <b>Chủ đề:</b>
+            @Model.Category?.CategoryName
+        </p>
+
+        <p>
+            <b>Mô tả:</b>
+            @Model.Description
+        </p>
+
+        <p>
+            <b>Giá:</b>
+            <span class="text-danger">
+                @Model.Price VNĐ
+            </span>
+        </p>
+
+        <a asp-action="Index"
+           class="btn btn-primary">
+            Quay lại
+        </a>
+
+    </div>
+
+</div>
